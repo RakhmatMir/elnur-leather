@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charm buyumni oʻzingiz yigʻing, narx darhol — El-Nur</title>
+<meta name="description" content="Kamar, soat tasmasi, hamyon yoki kartxolder: charm va ip rangi, toʻqa, oʻlcham, ism. Narxni shu zahoti koʻring va buyurtmani ustaga yuboring.">
+<meta property="og:title" content="Charm buyumni oʻzingiz yigʻing, narx darhol — El-Nur"><meta property="og:description" content="Kamar, soat tasmasi, hamyon yoki kartxolder: charm va ip rangi, toʻqa, oʻlcham, ism. Narxni shu zahoti koʻring va buyurtmani ustaga yuboring."><meta property="og:type" content="website">
+<!-- og:image (1200x630, руки мастера за работой + логотип): нужна фотография от владельца -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232F3A2A'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-weight='600' font-size='17' fill='%23F1EFE6'%3EEN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<script>document.documentElement.className+=" js"</script>
+<script>window.PAGE_META={"uz": ["Charm buyumni oʻzingiz yigʻing, narx darhol — El-Nur", "Kamar, soat tasmasi, hamyon yoki kartxolder: charm va ip rangi, toʻqa, oʻlcham, ism. Narxni shu zahoti koʻring va buyurtmani ustaga yuboring."], "ru": ["Конструктор кожаных изделий с ценой — El-Nur", "Соберите ремень, ремешок, кошелёк или картхолдер: цвет кожи и нитки, фурнитура, размер, гравировка. Цена видна сразу, заказ уходит мастеру."], "en": ["Design Your Own Leather Piece — El-Nur Leathercraft", "Build a belt, watch strap, wallet or card holder: leather, thread, buckle, size and initials. See the price instantly and send it to the maker."]}</script>
+</head>
+<body class="has-bar home inner" data-page="konstruktor" data-langs="uz,ru,en">
+<header class="site"><div class="wrap bar"><a class="logo" href="index.html" aria-label="El-Nur Leathercraft"><b>El-Nur</b><span>Leathercraft</span></a><nav class="nav" aria-label="Menu"><a href="katalog.html" data-t="nav.catalog"></a><a href="konstruktor.html" data-t="nav.build" aria-current="page"></a><a href="sovgalar.html" data-t="nav.gifts" data-noen></a><a href="usta.html" data-t="nav.about"></a><a href="aloqa.html" data-t="nav.contact"></a></nav><div class="end"><div class="lang" role="group" data-aria="lang.label"><button type="button" data-set="uz" aria-pressed="true">UZ</button><button type="button" data-set="ru" aria-pressed="false">RU</button><button type="button" data-set="en" aria-pressed="false">EN</button></div><a class="btn btn-primary btn-sm" href="konstruktor.html" data-t="cta.build"></a><button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer" data-aria="menu"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg><span class="t" data-t="menu"></span></button></div></div><div class="wrap drawer" id="drawer"><a href="katalog.html" data-t="nav.catalog"></a><a href="konstruktor.html" data-t="nav.build" aria-current="page"></a><a href="sovgalar.html" data-t="nav.gifts" data-noen></a><a href="usta.html" data-t="nav.about"></a><a href="yetkazish.html" data-t="nav.delivery" data-noen></a><a href="aloqa.html" data-t="nav.contact"></a><div class="lang" role="group" data-aria="lang.label"><button type="button" data-set="uz" aria-pressed="true">UZ</button><button type="button" data-set="ru" aria-pressed="false">RU</button><button type="button" data-set="en" aria-pressed="false">EN</button></div></div></header>
+<main>
+<div class="wrap kb-head">
+  <h1 data-t="kb.h1"></h1>
+  <p class="lead" data-t="kb.lead"></p>
+</div>
+
+<div class="wrap kb" id="kb">
+  <div class="kb-stage">
+    <div class="stage">
+      <div class="stage-top"><b data-t="kb.your"></b><span id="kStepTxt"></span></div>
+      <svg id="kArt" class="art" viewBox="0 0 520 240" role="img" aria-label=""></svg>
+      <div>
+        <div class="chips" id="kChips"></div>
+        <p class="disclaimer" data-t="kb.cap"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="kb-steps">
+    <!-- Цены: ремешок «от 200 000» [проверить актуальность]; ремень, кошелёк, картхолдер, гравировка, коробка — заглушки из макета [уточнить у владельца] (js/config.js) -->
+    <section class="step" id="stItem">
+      <p class="ctl-label" data-t="kb.s1"></p>
+      <div class="items" id="kItems"></div>
+      <div class="stepnav"><button class="btn btn-line btn-sm" type="button" data-go="next" data-t="kb.next"></button></div>
+    </section>
+
+    <section class="step" id="stLeather">
+      <p class="ctl-label"><span data-t="kb.s2"></span>: <span id="kLeatherName"></span></p>
+      <div class="swatches" id="kLeather"></div>
+      <!-- Фразу «Мастер пришлёт фото настоящей кожи» оставить, только если мастер так делает [уточнить у владельца] -->
+      <p class="hint" data-t="kb.leatherhint"></p>
+      <div class="stepnav"><button class="btn btn-line btn-sm" type="button" data-go="prev" data-t="kb.back"></button><button class="btn btn-line btn-sm" type="button" data-go="next" data-t="kb.next"></button></div>
+    </section>
+
+    <section class="step" id="stThread">
+      <p class="ctl-label"><span data-t="kb.s3"></span>: <span id="kThreadName"></span></p>
+      <div class="swatches" id="kThread"></div>
+      <p class="hint" data-t="kb.threadhint"></p>
+      <div class="stepnav"><button class="btn btn-line btn-sm" type="button" data-go="prev" data-t="kb.back"></button><button class="btn btn-line btn-sm" type="button" data-go="next" data-t="kb.next"></button></div>
+    </section>
+
+    <!-- У картхолдера фурнитура скрыта: есть ли она вообще [уточнить у владельца] -->
+    <section class="step" id="stHw">
+      <p class="ctl-label"><span id="kHwTitle"></span>: <span id="kHwName"></span></p>
+      <div class="swatches" id="kHw"></div>
+      <div class="stepnav"><button class="btn btn-line btn-sm" type="button" data-go="prev" data-t="kb.back"></button><button class="btn btn-line btn-sm" type="button" data-go="next" data-t="kb.next"></button></div>
+    </section>
+
+    <!-- Размер/модель: ширина ремня и модели картхолдера не известны, шаг для картхолдера скрыт [уточнить у владельца] -->
+    <section class="step" id="stSize">
+      <p class="ctl-label" id="kSizeTitle"></p>
+      <div id="kSize"></div>
+      <div class="stepnav"><button class="btn btn-line btn-sm" type="button" data-go="prev" data-t="kb.back"></button><button class="btn btn-line btn-sm" type="button" data-go="next" data-t="kb.next"></button></div>
+    </section>
+
+    <!-- Гравировка: цена, число знаков (12), допустимые символы, способ нанесения [уточнить у владельца] -->
+    <section class="step" id="stEngr">
+      <p class="ctl-label"><span data-t="kb.s6"></span> <span>+30 000</span></p>
+      <label class="check" style="margin-top:0"><input type="checkbox" id="kEngrOn"> <b data-t="kb.engrtoggle"></b></label>
+      <div id="kEngrWrap" class="fld" hidden style="margin-top:14px">
+        <p class="hint" id="kEngrHint" style="margin:0 0 10px"></p>
+        <div id="kEngrFld" class="fld" style="margin:0"><label class="field"><input id="kEngr" autocomplete="off" data-ph="b.engrph" placeholder="" aria-label="Gravirovka"><small id="kCnt">0 / 12</small></label><p class="err" id="kEngrErr"></p></div>
+        <p class="hint" data-t="kb.engrnote"></p>
+      </div>
+      <div class="stepnav"><button class="btn btn-line btn-sm" type="button" data-go="prev" data-t="kb.back"></button><button class="btn btn-line btn-sm" type="button" data-go="next" data-t="kb.next"></button></div>
+    </section>
+
+    <!-- Подарочная коробка: есть ли она и цена [уточнить у владельца] -->
+    <section class="step" id="stBox">
+      <p class="ctl-label"><span data-t="kb.s7"></span> <span>+20 000</span></p>
+      <label class="check" style="margin-top:0"><input type="checkbox" id="kBox"> <b data-t="b.box"></b></label>
+      <p class="hint" data-t="kb.boxhint"></p>
+      <div class="stepnav"><button class="btn btn-line btn-sm" type="button" data-go="prev" data-t="kb.back"></button></div>
+    </section>
+
+    <div class="kb-total" id="kTotal">
+      <p class="tt" data-t="kb.your"></p>
+      <div class="sum"><small data-t="total"></small><span id="kSum">200 000</span> <span class="cur" data-t="cur"></span></div>
+      <p data-t="b.approx"></p>
+      <button class="btn btn-light" type="button" id="kSend" data-t="kb.sendbtn"></button>
+      <p class="need" id="kNeed" role="alert"></p>
+      <button class="share" type="button" id="kShare" data-t="kb.share"></button>
+      <p class="msg" id="kMsg" role="status"></p>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="order" id="order" hidden aria-labelledby="oh1" data-formbox>
+    <div data-hide-on-ok>
+      <h2 id="oh1" data-t="f.title"></h2>
+      <p class="sub" data-t="f.sub"></p>
+      <div class="summary" id="oSummary"></div>
+    </div>
+    <form class="form" id="orderForm" data-kind="order" novalidate>
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="fld"><label for="o1" data-t="f.name"></label><input id="o1" type="text" name="name" autocomplete="name"><p class="err" data-t="e.name"></p></div>
+      <div class="fld"><label for="o2" data-t="f.phone"></label><input id="o2" type="tel" name="phone" autocomplete="tel" placeholder="+998 __ ___ __ __"><p class="err" data-t="e.phone"></p></div>
+      <div class="fld"><span class="lb" data-t="f.contact"></span>
+        <div class="pills">
+          <label class="pill"><input type="radio" name="contact" value="tg" checked><span data-t="f.tg"></span></label>
+          <label class="pill"><input type="radio" name="contact" value="call"><span data-t="f.callopt"></span></label>
+        </div></div>
+      <div class="fld"><label for="o3" data-t="f.city"></label><input id="o3" type="text" name="city" autocomplete="address-level2"></div>
+      <div class="fld"><label for="o4" data-t="f.comment"></label><textarea id="o4" name="comment" data-ph="f.commentph"></textarea></div>
+      <div class="fld file"><label for="o5" data-t="f.photo"></label><input id="o5" type="file" name="photo" accept="image/*"><p class="err" data-t="e.photo"></p></div>
+      <button class="btn btn-primary" type="submit" data-t="f.send"></button>
+      <!-- «Заказ ни к чему не обязывает» — подтвердить; если нужна предоплата за гравировку, дописать фразу из тексты.md [уточнить у владельца] -->
+      <p class="fine" data-t="f.legal"></p>
+      <div class="fail" role="alert">
+        <p class="fail-t"></p>
+        <div class="row"><a class="btn btn-primary btn-sm tgbtn" href="#" target="_blank" rel="noopener"></a><button type="button" class="btn btn-line btn-sm copy"></button></div>
+      </div>
+    </form>
+    <div class="thanks" role="status">
+      <h2 class="th-h"></h2>
+      <p class="no th-t"></p>
+      <!-- Срок ответа мастера: не показываем, пока владелец не назовёт [уточнить у владельца] -->
+      <p class="fine th-s"></p>
+      <div class="row"><a class="btn btn-primary" data-link="tg" href="#" data-t="th.tg"></a><a class="btn btn-line" href="index.html" data-t="th.home"></a></div>
+    </div>
+  </section>
+</div>
+<section class="wrap kb-real" aria-labelledby="krh">
+  <h2 id="krh" class="rv" data-t="hm.krh"></h2>
+  <p class="rv" data-t="hm.krt"></p>
+  <div class="kr-row">
+    <figure class="rv"><img src="img/strap-suede.jpg" width="1280" height="1280" alt="Zamsh soat tasmasi" loading="lazy"><figcaption data-t="s.suede"></figcaption></figure>
+    <figure class="rv d1"><img src="img/belt.jpg" width="1280" height="960" alt="Latun toʻqali charm kamar" loading="lazy"><figcaption data-t="c.2"></figcaption></figure>
+    <figure class="rv d2"><img src="img/emboss.jpg" width="2000" height="1333" alt="Bosma naqshli charm hamyon" loading="lazy"><figcaption data-t="cap.emboss"></figcaption></figure>
+    <figure class="rv d3"><img src="img/strap-nature.jpg" width="1280" height="1280" alt="Perforatsiyali tabiiy rangdagi tasma" loading="lazy"><figcaption data-t="s.nature"></figcaption></figure>
+  </div>
+</section>
+</main>
+
+<div class="mbar" id="mbar">
+  <div class="sum"><small data-t="total"></small><span id="mSum">200 000</span> <span data-t="cur" style="font-size:.7em"></span></div>
+  <button class="btn btn-light" type="button" id="mSend" data-t="kb.mbtn"></button>
+</div>
+
+<footer class="h-foot">
+  <div class="hf-photo"><img data-par src="img/strap-suede.jpg" width="1280" height="1280" alt="" loading="lazy"></div>
+  <div class="hf-body">
+    <a class="logo" href="index.html"><b>El-Nur</b><span>Leathercraft</span></a>
+    <nav class="hf-menu" aria-label="Footer">
+      <a href="katalog.html" data-t="nav.catalog"></a>
+      <a href="konstruktor.html" data-t="nav.build"></a>
+      <a href="sovgalar.html" data-t="nav.gifts" data-noen></a>
+      <a href="usta.html" data-t="nav.about"></a>
+      <a href="yetkazish.html" data-t="nav.delivery" data-noen></a>
+      <a href="aloqa.html" data-t="nav.contact"></a>
+    </nav>
+    <div class="hf-info">
+      <div><b data-t="foot.workshop"></b> <span data-t="foot.workshopv"></span><br><b data-t="foot.shop"></b> <span data-t="foot.shopv"></span><br><a data-link="tel" href="#" data-phone></a> · <a data-link="mail" href="#" data-email></a></div>
+      <div><a data-link="tg" href="#">Telegram</a><br><a data-link="ig" href="#">Instagram</a><br><a data-link="fb" href="#">Facebook</a></div>
+    </div>
+    <p class="hf-legal" data-t="foot.copy"></p>
+  </div>
+</footer>
+<div class="fab"><a class="tg" data-link="tg" href="#" data-aria="fab.tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 4L3 11.2l6.3 2.3L18 7.5l-6.6 7.2 7.1 5.3L21 4z"/></svg></a><a class="call" data-link="tel" href="#" data-aria="fab.call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></a></div>
+<script src="js/i18n.js"></script>
+<script src="js/i18n-home.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/builder.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
