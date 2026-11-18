@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rakhmatmir.github.io/elnur-leather/sitemap.xml
