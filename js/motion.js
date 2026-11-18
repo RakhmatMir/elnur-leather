@@ -11,7 +11,7 @@ var pt = document.querySelector('.pt');
 if(pt && doc.classList.contains('pt-in')){
   requestAnimationFrame(function(){requestAnimationFrame(function(){
     pt.classList.add('out'); doc.classList.remove('pt-in');
-    setTimeout(function(){pt.classList.remove('out')},520);
+    setTimeout(function(){pt.classList.remove('out')},1100);
   })});
 }
 window.addEventListener('pageshow',function(e){
@@ -23,14 +23,12 @@ if(!('IntersectionObserver' in window)){doc.classList.add('nomotion'); return}
 
 /* ---------- появление по частям ---------- */
 var seen = new WeakSet(), io = new IntersectionObserver(function(entries){
+  /* появление — медленно и по очереди; ушёл с экрана — так же мягко исчезает и появится снова */
   var vis = entries.filter(function(e){return e.isIntersecting}).map(function(e){return e.target});
   vis.sort(function(a,b){return (a.compareDocumentPosition(b) & 4) ? -1 : 1});
-  vis.forEach(function(el,i){
-    el.style.setProperty('--d',Math.min(i,8)*75+'ms');
-    el.classList.add('in'); io.unobserve(el);
-    if(el.classList.contains('rv')) setTimeout(function(){el.classList.remove('rv')},2200+i*75);
-  });
-},{rootMargin:'0px 0px -6% 0px',threshold:0.06});
+  vis.forEach(function(el,i){ el.style.setProperty('--d',Math.min(i,8)*140+'ms'); el.classList.add('in'); });
+  entries.forEach(function(e){ if(!e.isIntersecting && e.target.classList.contains('in')) e.target.classList.remove('in'); });
+},{rootMargin:'-4% 0px -8% 0px',threshold:0.02});
 
 function scan(root){
   root = root || document;
@@ -72,7 +70,7 @@ if(!vt && pt){
     e.preventDefault();
     try{sessionStorage.setItem('pt','1')}catch(x){}
     pt.classList.add('on');
-    setTimeout(function(){location.href = a.href},380);
+    setTimeout(function(){location.href = a.href},700);
   });
 }
 })();
