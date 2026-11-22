@@ -31,7 +31,7 @@ function itemPrice(item,l){return priceInfo(item==='strap'?'from':'approx',item,
 function priceHtml(i,withNote){return '<span class="pv">'+esc(i.text)+'</span>'+((withNote&&i.note)?' <span class="pn">· '+esc(i.note)+'</span>':'')}
 function prodPrice(p,l){return priceInfo(p.price.mode,p.price.key,l)}
 
-var WEBP_W = {"bag-backpack":[361],"bag-tote":[640],"bag-woman":[640],"belt":[800,1280],"emboss":[800,1600],"hat-detail":[800,1012],"hat-full":[720],"emboss-logo":[700],"master":[800,1600],"process":[357],"set-black":[630],"shop":[800,1600],"strap-black":[800,900],"strap-croco":[800,900],"strap-matte":[800,900],"strap-nature":[800,900],"strap-suede":[800,900],"table":[800,1600],"wallet-bifold":[574]};
+var WEBP_W = {"bag-backpack":[361],"bag-tote":[640],"bag-woman":[640],"belt":[800,1280],"emboss":[800,1600],"hat-detail":[800,1012],"hat-full":[720],"emboss-logo":[700],"master":[800,1600],"process":[357],"set-black":[630],"shop":[800,1600],"strap-black":[800,900],"strap-croco":[800,900],"strap-matte":[800,900],"strap-nature":[800,900],"strap-suede":[800,900],"table":[800,1600],"wallet-bifold":[574],"strap-bubble":[800],"strap-classic":[800],"strap-green":[800],"belt-classic":[800],"belt-podium":[800],"wallet-anor":[800],"bag-suzani":[600],"pendant-anor":[600],"pendant-pepper":[800],"box-dome":[800],"damas":[600],"gourd-toys":[800],"tray":[800]};
 /* Фото в WebP: <picture> с запасным JPG. Список ширин WebP — по файлам (как в img/). */
 function picSrcset(name){var ws = WEBP_W[name]; return ws ? ws.map(function(w){return 'img/'+name+'-'+w+'.webp '+w+'w'}).join(', ') : ''}
 function picHtml(name, attrs, sizes){
